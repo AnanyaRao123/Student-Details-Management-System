@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Record Details</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <nav class="menu">
+        <div class="menu-container">
+            <a href="index.html" class="logo">Student Record Details</a>
+            <div class="menu-items">
+                <a href="index.html" class="link">Home</a>
+                <a href="create.html" class="link">Create</a>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="title">
+            <h1>Create</h1>
+        </div>
+        <div class="form-container">
+            <form id="studentForm" autocomplete="off" method="post">
+                <div class="form-item">
+                    <label for="usn">USN</label>
+                    <input type="text" name="usn" id="usn" class="form-input" placeholder="Enter your USN" required>
+                </div>
+                <div class="form-item">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name" class="form-input" placeholder="Enter your name" required>
+                </div>
+                <div class="form-item">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" class="form-input" required>
+                </div>
+                <div class="form-item">
+                    <label for="dept">Department</label>
+                    <select name="dept" id="dept" class="form-input" required>
+                        <option value="" disabled selected>Choose Department</option>
+                        <option value="AIDS">AIDS</option>
+                        <option value="AIML">AIML</option>
+                        <option value="CSE">CSE</option>
+                        <option value="ECE">ECE</option>
+                        <option value="CIVIL">CIVIL</option>
+                        <option value="MECH">MECH</option>
+                    </select>
+                </div>
+                <div class="form-item">
+                    <label for="mobile">Mobile</label>
+                    <input type="text" name="mobile" id="mobile" class="form-input" pattern="[0-9]{10}" title="Please enter 10 digits" required>
+                </div>
+                <div class="form-item">
+                    <label for="gender">Gender</label>
+                    <select name="gender" id="gender" class="form-input" required>
+                        <option value="" disabled selected>Choose Gender</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <div class="form-item">
+                    <label for="address">Address</label>
+                    <textarea name="address" id="address" class="form-input" cols="30" rows="6" required></textarea>
+                </div>
+                <div class="form-item">
+                    <label for="hobbies">Hobbies</label>
+                    <textarea name="hobbies" id="hobbies" class="form-input" cols="30" rows="2" required></textarea>
+                </div>
+                <div class="form-item">
+                    <button type="submit" class="btn success">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="./js/add.js"></script>
+</body>
+</html>
